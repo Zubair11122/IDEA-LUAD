@@ -1,0 +1,36 @@
+6A_Model_training.py
+✅ Final Test AUC: 0.9414
+🎯 SUCCESS: AUC target achieved!
+🧠 Final model saved as driver_prediction_model.keras
+
+📊 Cross-Validated AUCs: [0.8871233538776673, 0.8804091935894407, 0.8787318827757897, 0.876736702969862, 0.8827059535876678, 0.8722669667437882, 0.875564046124452, 0.8765291736174559, 0.8856339119723271, 0.8801177978839297]
+📈 Mean AUC: 0.8796 ± 0.0044
+🏆 Best Fold AUC: 0.8871
+
+Process finished with exit code 0
+
+8_tabtransformer_train.py
+⛔ SHAP model underperformed (AUC < 0.88) - not saved
+
+📊 Final Report:
+📈 Cross-Validated AUCs: [0.8838, 0.8804, 0.8817, 0.8723, 0.8816, 0.8695, 0.8765, 0.8794, 0.8865, 0.8828]
+✅ Mean AUC: 0.8794 ± 0.0050
+🏆 Best Fold AUC: 0.8865
+⚠️ WARNING: SHAP model underperformed - keeping original 94% AUC model
+
+Process finished with exit code 0
+
+
+🧠 SHAP-filtered model saved as models-140-180/driver_prediction_SHAP_20250502_094126_auc0.8803.keras
+🔒 Original 94% AUC model remains unchanged in its location
+
+📊 Final Report:
+📈 Cross-Validated AUCs: [0.8866, 0.8818, 0.8775, 0.8754, 0.8852, 0.8744, 0.8764, 0.8794, 0.8859, 0.8803]
+✅ Mean AUC: 0.8803 ± 0.0042
+🏆 Best Fold AUC: 0.8866
+🎯 SUCCESS: SHAP model meets target AUC!
+💡 Compare with original model using:
+   original = tf.keras.models.load_model('driver_prediction_model.keras')
+   shap_model = tf.keras.models.load_model('models-140-180/driver_prediction_SHAP_20250502_094126_auc0.8803.keras')
+
+Process finished with exit code 0
