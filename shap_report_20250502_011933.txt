@@ -1,0 +1,141 @@
+SHAP Analysis Report (20250502_011933)
+========================================
+
+Total features: 176
+Selected features: 101
+
+Top 20 Features:
+                                 feature      shap          group  cumulative
+4                       num__revel.score  0.251922          REVEL    0.075096
+6                      num__gerp.gerp_rs  0.163174           GERP    0.123737
+2                        num__cadd.phred  0.151424           CADD    0.168876
+5    num__alphamissense.am_pathogenicity  0.134663  AlphaMissense    0.209018
+152          cat__dominant_signature_nan  0.099301          Other    0.238619
+17                             num__sbs8  0.092627          Other    0.266230
+56                           num__sbs40c  0.086843          Other    0.292117
+173        cat__sift.prediction_Damaging  0.080748           SIFT    0.316188
+11                             num__sbs5  0.077270          Other    0.339221
+18                             num__sbs9  0.075064          Other    0.361597
+3                        num__sift.score  0.069171           SIFT    0.382217
+0                                num__af  0.063282          Other    0.401081
+7                              num__sbs1  0.057372          Other    0.418183
+165             cat__so_missense_variant  0.056004          Other    0.434877
+35                           num__sbs22a  0.047322          Other    0.448983
+90                            num__sbs97  0.046891          Other    0.462961
+85                            num__sbs92  0.046491          Other    0.476820
+9                              num__sbs3  0.041039          Other    0.489053
+1                                num__dp  0.040692          Other    0.501183
+33                            num__sbs20  0.040353          Other    0.513212
+
+Group Importance:
+group
+AlphaMissense    0.134663
+CADD             0.151424
+SIFT             0.196907
+REVEL            0.251922
+GERP             0.163174
+Variant_Type     0.039124
+Other            2.417443
+
+Selected Features:
+num__alphamissense.am_pathogenicity
+num__cadd.phred
+cat__sift.prediction_Damaging
+num__revel.score
+num__gerp.gerp_rs
+cat__dominant_signature_nan
+num__sbs8
+num__sbs40c
+num__sbs5
+num__sbs9
+num__sift.score
+num__af
+num__sbs1
+cat__so_missense_variant
+num__sbs22a
+num__sbs97
+num__sbs92
+num__sbs3
+num__dp
+num__sbs20
+num__sbs13
+num__sbs10a
+num__sbs37
+num__sbs16
+num__sbs12
+num__sbs87
+num__sbs2
+num__sbs28
+num__sbs59
+cat__sift.prediction_Tolerated
+num__sbs54
+num__sbs39
+num__sbs31
+num__sbs29
+num__sbs58
+num__sbs98
+num__sbs19
+num__sbs34
+num__sbs41
+num__sbs93
+num__sbs32
+cat__so_nan
+num__sbs35
+cat__so_stop_gained
+num__sbs38
+num__sbs24
+num__sbs25
+num__sbs21
+num__sbs99
+num__sbs7a
+num__sbs17a
+cat__sift.prediction_nan
+num__sbs52
+num__sbs95
+num__sbs86
+num__sbs57
+cat__dominant_signature_SBS93
+num__sbs4
+num__sbs51
+num__sbs10c
+num__sbs18
+num__sbs11
+num__sbs89
+num__sbs26
+cat__variant_classification_missense_variant
+num__sbs88
+num__sbs96
+num__sbs47
+num__sbs45
+num__sbs91
+num__sbs50
+num__sbs7b
+num__sbs48
+num__sbs55
+num__sbs10d
+num__sbs6
+num__sbs23
+num__sbs53
+num__sbs7d
+num__sbs84
+cat__variant_classification_stop_gained
+num__sbs7c
+num__sbs30
+cat__variant_classification_frameshift_variant
+num__sbs27
+cat__dominant_signature_SBS14
+num__sbs40b
+cat__dominant_signature_SBS38
+cat__dominant_signature_SBS99
+num__sbs60
+cat__dominant_signature_SBS50
+cat__dominant_signature_SBS86
+cat__dominant_signature_SBS27
+num__sbs90
+num__sbs40a
+cat__dominant_signature_SBS51
+num__sbs15
+cat__dominant_signature_SBS2
+cat__dominant_signature_SBS48
+num__sbs43
+num__sbs56
