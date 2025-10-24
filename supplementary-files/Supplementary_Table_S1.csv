@@ -1,0 +1,19 @@
+Characteristic,Value
+Never smoker (%),0
+Former smoker (%),61.99649737
+Current smoker (%),0
+Stage I (%),89.84238179
+Stage II (%),36.25218914
+Stage III (%),14.71103327
+Stage IV (%),4.553415061
+Male (%),42.55691769
+Female (%),48.68651489
+Median age at diagnosis,66
+5-year survival rate (%),79.24528302
+Median mutations/sample,179
+Mean mutations/sample,304.7597403
+Driver mutations (%),4.624677732
+Fraction genome altered (median),25.595
+Mean coverage depth,5.392303923
+Median coverage depth,4
+% PASS variants,0

@@ -1,0 +1,6 @@
+Feature,IDEA-LUAD,DeepDriver,EMOGI
+Input Data,SNVs + functional scores + COSMIC SBS signatures,Sequence context + conservation,Multi-omics (mutations + expression)
+Interpretability,SHAP (feature-level),Black-box,GNN-based (gene-level)
+Scope,Mutation-level (LUAD-focused),Pan-cancer,Gene-level (pan-cancer)
+Performance,AUROC 0.941 (LUAD),AUROC ~0.85 (pan-cancer),AUROC ~0.89 (pan-cancer)
+Clinical Utility,Links SBS38 to survival (HR=1.73),Limited clinical validation,Focused on gene networks
