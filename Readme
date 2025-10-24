@@ -1,0 +1,74 @@
+# IDEA‑LUAD  
+Driver Prediction & Single‑Cell Multi‑Omics Workflow for Lung Adenocarcinoma (LUAD)
+
+## Introduction  
+This repository contains reproducible analysis pipelines and results for our study on driver mutation prediction and single‑cell multi‑omics integration in lung adenocarcinoma (LUAD). The workflow was developed to support the manuscript *IDEA‑LUAD*. We emphasise code transparency, reproducibility, and organized output structure.
+
+## Repository Structure  
+```
+IDEA‑LUAD/
+│
+├─ code/                      ← All scripts, notebooks and pipelines  
+│   ├─ preprocessing/          ← Data QC and filtering (scRNA‑seq, scATAC‑seq)  
+│   ├─ variant_analysis/       ← Variant calling, classification, ROC/PR curves  
+│   ├─ singlecell_integration/ ← Seurat/Signac workflows  
+│   └─ utils/                  ← Helper scripts, environment setup  
+│
+├─ results/                   ← Generated output files  
+│   ├─ tables/                 ← Summary tables, model results  
+│   ├─ figures/                ← Publication‑ready plots (ROC curves, Venn diagrams)  
+│   ├─ data_previews/          ← Sample/preview files meant for sharing  
+│   └─ logs/                   ← Execution logs, system info  
+│
+├─ data/                      ← (Optional) Raw / processed datasets (if included)  
+├─ README.md                  ← This file  
+└─ .gitignore                 ← Files/folders excluded from version control  
+```
+
+## Getting Started  
+### Prerequisites  
+- Linux environment (e.g., Dell Precision 3660, NVIDIA GPU driver 570.133.20, CUDA 12.8)  
+- Python 3.x (see `environment.yml` or `requirements.txt` in `code/utils/`)  
+- R ≥ 4.x with packages: Seurat, Signac, etc.  
+- (Optional) Git LFS if including large binary outputs (see section below)
+
+### Reproduce the Workflow  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Zubair11122/IDEA‑LUAD.git
+   cd IDEA‑LUAD
+   ```
+2. Install dependencies:  
+   ```bash
+   conda env create -f code/utils/environment.yml
+   conda activate idea_luad
+   ```
+3. Execute the pipelines in order (example):  
+   ```bash
+   Rscript code/preprocessing/filter_scATAC.R        --input data/raw/Combined_ATAC.rds        --output results/data_previews/filtered_ATAC_sample.rds
+
+   python code/variant_analysis/predict_drivers.py        --input results/data_previews/variant_summary.csv        --output results/tables/predictions_model.csv
+   ```
+4. View the results in `results/` and the publication‑ready figures in `results/figures/`.
+
+## Adding Your Own Data  
+If you have large raw data or binary files (e.g., full scATAC object >100 MB), please store them externally (e.g., Zenodo, institutional storage) and include a link in this README under “Large Payloads”. For sharing in the repo, upload only sample previews (<25 MB) into `results/data_previews/`.
+
+## Large Payloads (optional)  
+If adding full datasets or heavy model‑outputs, enable Git LFS:  
+```bash
+git lfs install
+git lfs track "*.rds" "*.pkl" "*.h5"
+git add .gitattributes
+git commit -m "Track large binaries via Git LFS"
+```
+Alternatively, link to external storage.
+
+## Contributing  
+Please submit issues or pull requests via GitHub. When modifying workflows, update the relevant scripts in `code/`, commit with descriptive messages, and regenerate example outputs.
+
+## License  
+This project is released under the MIT License (see `LICENSE`).
+
+## Contact  
+For questions or collaboration, please contact Zubair at <Zubair@emails.bjut.edu> or open an issue on this repo.
